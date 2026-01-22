@@ -1,21 +1,17 @@
 <?php
 
-// ***** CORRECT NAMESPACE *****
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
-use Illuminate\Validation\Rules\Password; // Use the Password rule object
 
-// ***** CORRECT CLASS NAME *****
 class UserSignupController extends Controller
 {
     /**
@@ -23,8 +19,7 @@ class UserSignupController extends Controller
      */
     public function create(): View
     {
-        // Pass any necessary data to the view
-        return view('auth.user-signup'); // Ensure this view exists (resources/views/auth/signup.blade.php)
+        return view('auth.user-signup');
     }
 
     /**
@@ -35,41 +30,53 @@ class UserSignupController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            // Use 'full_name' based on your form
             'full_name' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255', 'unique:'.User::class],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class, 'confirmed'], // Added 'confirmed'
-            'password' => ['required', 'confirmed', Password::defaults()], // Use Password rule & 'confirmed'
-            'terms' => ['accepted'], // Add validation for terms
+            'username' => ['required', 'string', 'max:100', 'min:7', 'unique:'.User::class, 'regex:/^[a-zA-Z0-9]+$/'],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class, 'confirmed'],
+            'password' => ['required', 'confirmed', Rules\Password::min(8)],
+            'terms' => ['required'], // Use 'required' rule since form sends value="accept"
+            // Optional fields
+            'phone_number' => ['nullable', 'string', 'max:20'],
+            'address' => ['nullable', 'string', 'max:255'],
+            'city' => ['nullable', 'string', 'max:100'],
+            'state' => ['nullable', 'string', 'max:100'],
+            'zip_code' => ['nullable', 'string', 'max:20'],
+        ], [
+            'username.regex' => 'The username must contain only letters and numbers.',
+            'username.min' => 'The username must be at least 7 characters.',
+            'username.unique' => 'This username has already been taken.',
+            'email.unique' => 'This email address is already registered.',
+            'email.confirmed' => 'The email confirmation does not match.',
+            'password.confirmed' => 'The password confirmation does not match.',
+            'terms.required' => 'You must agree to the Terms of Service to register.',
         ]);
 
+        // Split full_name into first_name and last_name
+        $nameParts = explode(' ', $request->full_name, 2);
+        $firstName = $nameParts[0];
+        $lastName = $nameParts[1] ?? '';
+
         $user = User::create([
-            'name' => $request->full_name, // Map full_name to name column
+            'first_name' => $firstName,
+            'last_name' => $lastName,
             'username' => $request->username,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'role' => 'user', // Assign 'user' role specifically
+            'phone_number' => $request->phone_number,
+            'address' => $request->address,
+            'city' => $request->city,
+            'state' => $request->state,
+            'zip_code' => $request->zip_code,
+            'role' => User::ROLE_USER,
         ]);
 
+        // Dispatch the Registered event (triggers email verification)
         event(new Registered($user));
-        
-        $password= Hash::make($request->password) ;
-        dd(Hash::make($request->password));
-        Log::debug($password);
 
-        // No automatic login after signup for email verification flow
-        // Auth::login($user);
+        // Store email in session to display on the notice page
+        Session::flash('signup_email', $user->email);
 
-        // Redirect back with success message and email for display
-        // Or redirect to login page with a message
-        return redirect()->route('signup') // Redirect back to the signup page
-                         ->with('status', 'verification-link-sent')
-                         ->with('signup_email', $request->email);
-
-        // Alternative: Redirect to login page
-        // return redirect()->route('login')->with('status', 'Registration successful! Please check your email to verify your account.');
-
-        // Original Breeze Redirect (if auto-login was enabled):
-        // return redirect(RouteServiceProvider::HOME);
+        // Redirect back to the signup page view with a status message
+        return redirect()->back()->with('status', 'verification-link-sent');
     }
 }
