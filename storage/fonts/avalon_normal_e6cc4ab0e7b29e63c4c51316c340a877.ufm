@@ -1,0 +1,311 @@
+StartFontMetrics 4.1
+Notice Converted by PHP-font-lib
+Comment https://github.com/dompdf/php-font-lib
+EncodingScheme FontSpecific
+Copyright Copyright (c) 2021 by Vladimir Nikolic. All rights reserved.
+FontName Avalon
+FontSubfamily Regular
+UniqueID VladimirNikolic: Avalon Regular: 2021
+FullName Avalon Regular
+Version Version 1.000
+PostScriptName Avalon-Regular
+Trademark Avalon Regular is a trademark of Vladimir Nikolic.
+Manufacturer Vladimir Nikolic
+Designer Vladimir Nikolic
+Description Copyright (c) 2021 by Vladimir Nikolic. All rights reserved.
+FontVendorURL https://www.coroflot.com/vladimirnikolic
+FontDesignerURL https://www.coroflot.com/vladimirnikolic
+CompatibleFullName 䅶慬潮⁒敧畬慲
+Weight Medium
+ItalicAngle 0
+IsFixedPitch false
+UnderlineThickness 50
+UnderlinePosition -75
+FontHeightOffset 0
+Ascender 750
+Descender -250
+FontBBox -28 -70 1097 748
+StartCharMetrics 75
+U 0 ; WX 0 ; N NULL ; G 1
+U 29 ; WX 0 ; N NULL ; G 1
+U 32 ; WX 241 ; N space ; G 3
+U 33 ; WX 309 ; N exclam ; G 54
+U 34 ; WX 382 ; N quotedbl ; G 55
+U 39 ; WX 238 ; N quotesingle ; G 56
+U 44 ; WX 249 ; N comma ; G 57
+U 46 ; WX 250 ; N period ; G 58
+U 48 ; WX 654 ; N zero ; G 59
+U 49 ; WX 654 ; N one ; G 60
+U 50 ; WX 654 ; N two ; G 61
+U 51 ; WX 654 ; N three ; G 62
+U 52 ; WX 654 ; N four ; G 63
+U 53 ; WX 654 ; N five ; G 64
+U 54 ; WX 654 ; N six ; G 65
+U 55 ; WX 654 ; N seven ; G 66
+U 56 ; WX 654 ; N eight ; G 67
+U 57 ; WX 654 ; N nine ; G 68
+U 58 ; WX 280 ; N colon ; G 69
+U 59 ; WX 284 ; N semicolon ; G 70
+U 63 ; WX 586 ; N question ; G 71
+U 65 ; WX 803 ; N A ; G 74
+U 66 ; WX 661 ; N B ; G 72
+U 67 ; WX 673 ; N C ; G 73
+U 68 ; WX 639 ; N D ; G 53
+U 69 ; WX 565 ; N E ; G 4
+U 70 ; WX 553 ; N F ; G 5
+U 71 ; WX 709 ; N G ; G 6
+U 72 ; WX 635 ; N H ; G 7
+U 73 ; WX 287 ; N I ; G 8
+U 74 ; WX 429 ; N J ; G 9
+U 75 ; WX 691 ; N K ; G 10
+U 76 ; WX 405 ; N L ; G 11
+U 77 ; WX 775 ; N M ; G 12
+U 78 ; WX 665 ; N N ; G 13
+U 79 ; WX 710 ; N O ; G 14
+U 80 ; WX 601 ; N P ; G 15
+U 81 ; WX 749 ; N Q ; G 16
+U 82 ; WX 651 ; N R ; G 17
+U 83 ; WX 619 ; N S ; G 18
+U 84 ; WX 509 ; N T ; G 19
+U 85 ; WX 652 ; N U ; G 20
+U 86 ; WX 815 ; N V ; G 21
+U 87 ; WX 1096 ; N W ; G 22
+U 88 ; WX 647 ; N X ; G 23
+U 89 ; WX 716 ; N Y ; G 24
+U 90 ; WX 591 ; N Z ; G 25
+U 97 ; WX 803 ; N a ; G 26
+U 98 ; WX 661 ; N b ; G 27
+U 99 ; WX 673 ; N c ; G 28
+U 100 ; WX 639 ; N d ; G 29
+U 101 ; WX 565 ; N e ; G 30
+U 102 ; WX 553 ; N f ; G 31
+U 103 ; WX 709 ; N g ; G 32
+U 104 ; WX 635 ; N h ; G 33
+U 105 ; WX 287 ; N i ; G 34
+U 106 ; WX 429 ; N j ; G 35
+U 107 ; WX 691 ; N k ; G 36
+U 108 ; WX 405 ; N l ; G 37
+U 109 ; WX 753 ; N m ; G 38
+U 110 ; WX 665 ; N n ; G 39
+U 111 ; WX 710 ; N o ; G 40
+U 112 ; WX 601 ; N p ; G 41
+U 113 ; WX 749 ; N q ; G 42
+U 114 ; WX 651 ; N r ; G 43
+U 115 ; WX 619 ; N s ; G 44
+U 116 ; WX 509 ; N t ; G 45
+U 117 ; WX 652 ; N u ; G 46
+U 118 ; WX 815 ; N v ; G 47
+U 119 ; WX 1096 ; N w ; G 48
+U 120 ; WX 647 ; N x ; G 49
+U 121 ; WX 716 ; N y ; G 50
+U 122 ; WX 591 ; N z ; G 51
+U 8364 ; WX 724 ; N Euro ; G 52
+EndCharMetrics
+StartKernData 
+StartKernPairs 2226
+
+KPX NULL NULL -14
+KPX NULL space 19
+KPX NULL exclam -14
+KPX NULL quotedbl -14
+KPX NULL quotesingle -14
+KPX NULL comma -20
+KPX NULL period -10
+KPX NULL zero -59
+KPX NULL one -65
+KPX NULL two -59
+KPX NULL three -31
+KPX NULL five -14
+KPX NULL H -14
+KPX NULL I 19
+KPX NULL J -49
+
+KPX space NULL -4
+KPX space space 21
+KPX space exclam -4
+KPX space quotedbl -4
+KPX space quotesingle -4
+KPX space period -6
+KPX space zero -59
+KPX space one -18
+KPX space two -59
+KPX space three -13
+KPX space five -4
+KPX space H -4
+KPX space I 21
+KPX space J 12
+
+KPX exclam space 9
+KPX exclam comma -12
+KPX exclam period -11
+KPX exclam zero -17
+KPX exclam one -14
+KPX exclam two -17
+KPX exclam three -9
+KPX exclam I 9
+KPX exclam J -17
+
+KPX quotedbl NULL 6
+KPX quotedbl space 20
+KPX quotedbl exclam 6
+KPX quotedbl quotedbl 6
+KPX quotedbl quotesingle 6
+KPX quotedbl one -4
+KPX quotedbl five 6
+KPX quotedbl H 6
+KPX quotedbl I 20
+KPX quotedbl J 6
+
+KPX quotesingle NULL 6
+KPX quotesingle space 20
+KPX quotesingle exclam 6
+KPX quotesingle quotedbl 6
+KPX quotesingle quotesingle 6
+KPX quotesingle one -4
+KPX quotesingle five 6
+KPX quotesingle H 6
+KPX quotesingle I 20
+KPX quotesingle J 6
+
+KPX comma space 24
+KPX comma period 5
+KPX comma zero 5
+KPX comma one -18
+KPX comma two 5
+KPX comma three -8
+KPX comma I 24
+KPX comma J -26
+
+KPX period NULL 21
+KPX period space 42
+KPX period exclam 21
+KPX period quotedbl 21
+KPX period quotesingle 21
+KPX period comma 12
+KPX period period 24
+KPX period zero 26
+KPX period two 26
+KPX period three 9
+KPX period five 21
+KPX period H 21
+KPX period I 42
+KPX period J -24
+
+KPX zero space -49
+KPX zero comma -43
+KPX zero period 6
+KPX zero zero 54
+KPX zero one 31
+KPX zero two 54
+KPX zero three 17
+KPX zero I -49
+KPX zero J -184
+
+KPX one NULL -4
+KPX one space -37
+KPX one exclam -4
+KPX one quotedbl -4
+KPX one quotesingle -4
+KPX one comma -6
+KPX one period -6
+KPX one zero 42
+KPX one one 19
+KPX one two 42
+KPX one three 11
+KPX one five -4
+KPX one H -4
+KPX one I -37
+KPX one J 43
+
+KPX two space -49
+KPX two comma -43
+KPX two period 6
+KPX two zero 54
+KPX two one 31
+KPX two two 54
+KPX two three 17
+KPX two I -49
+KPX two J -184
+
+KPX three NULL -19
+KPX three space -25
+KPX three exclam -19
+KPX three quotedbl -19
+KPX three quotesingle -19
+KPX three comma -24
+KPX three period -15
+KPX three zero 33
+KPX three one 10
+KPX three two 33
+KPX three three -4
+KPX three five -19
+KPX three H -19
+KPX three I -25
+KPX three J 7
+
+KPX five NULL -14
+KPX five space 19
+KPX five exclam -14
+KPX five quotedbl -14
+KPX five quotesingle -14
+KPX five comma -20
+KPX five period -10
+KPX five zero -59
+KPX five one -65
+KPX five two -59
+KPX five three -31
+KPX five five -14
+KPX five H -14
+KPX five I 19
+KPX five J -49
+
+KPX H NULL 6
+KPX H space 35
+KPX H exclam 6
+KPX H quotedbl 6
+KPX H quotesingle 6
+KPX H comma 5
+KPX H period 9
+KPX H zero -25
+KPX H one -26
+KPX H two -26
+KPX H three -8
+KPX H five 6
+KPX H H 6
+KPX H I 35
+KPX H J -26
+
+KPX I NULL 4
+KPX I space 29
+KPX I exclam 4
+KPX I quotedbl 4
+KPX I quotesingle 4
+KPX I comma 8
+KPX I period 6
+KPX I zero -16
+KPX I one -23
+KPX I two -18
+KPX I three 6
+KPX I five 4
+KPX I H 4
+KPX I I 29
+KPX I J -16
+
+KPX J NULL 13
+KPX J space -32
+KPX J exclam 13
+KPX J quotedbl 13
+KPX J quotesingle 13
+KPX J comma 18
+KPX J period -54
+KPX J zero -182
+KPX J one 43
+KPX J two -150
+KPX J three 29
+KPX J five 13
+KPX J H 13
+KPX J I -32
+KPX J J 67
+EndKernPairs
+EndKernData
+EndFontMetrics
